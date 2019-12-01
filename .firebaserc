@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "reactive-restaurant",
+    "firebase-react-deploy": "reactive-restaurant"
+  }
+}
