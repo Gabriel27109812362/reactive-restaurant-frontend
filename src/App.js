@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import store from './store/store';
+import About from './components/views/About/About';
 
 import Home from './components/views/Home/Home'
-import { BrowserRouter as Router, Route } from "react-router-dom"
 
 const App = () => {
-	return (
 
+  return (
     <Provider store={store}>
-    <Route exact path='/' component={Home} />
-			<div className="App"> </div>
-		</Provider>
-	);
+      <div className="App">
+        <Router>
+          <Switch>
+            <Route path='/about' component={About}/>
+
+            <Route path='/' component={Home}/>
+          </Switch>
+        </Router>
+      </div>
+    </Provider>
+  );
 };
 
 export default Home;
