@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './SignIn.module.scss';
 
-const MyComponent = () => {
+const SignIn = () => {
   return (
     <div>
-
+      SignIn
     </div>
   );
 };
 
-export default MyComponent;
+export default SignIn;

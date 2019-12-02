@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './SignUp.module.scss';
 
-const MyComponent = () => {
+const SignUp = () => {
   return (
     <div>
-
+      SignUp
     </div>
   );
 };
 
-export default MyComponent;
+export default SignUp;
