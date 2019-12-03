@@ -1,19 +1,40 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import { Provider } from 'react-redux';
-import store from './store/store';
-
-import Home from './components/views/Home/Home'
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import {Provider} from 'react-redux';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
+import {mainRoutes} from './routes';
+import store from 'store/store';
+import About from 'components/views/About/About';
+import SignIn from 'components/views/SignIn/SignIn';
+import SignUp from 'components/views/SignUp/SignUp';
+import Home from 'components/views/Home/Home';
 
 const App = () => {
-	return (
 
+  const {root, about, signIn, signUp, home} = mainRoutes;
+
+  return (
     <Provider store={store}>
-    <Route exact path='/' component={Home} />
-			<div className="App"> </div>
-		</Provider>
-	);
+      <div className="App">
+        <Router>
+          <Switch>
+            <Route path={about} component={About}/>
+            <Route path={signIn} component={SignIn}/>
+            <Route path={signUp} component={SignUp}/>
+            <Route path={home}>
+              <Redirect to={root}/>
+            </Route>
+            <Route path={root} component={Home}/>
+          </Switch>
+        </Router>
+      </div>
+    </Provider>
+  );
 };
 
-export default Home;
+export default App;
