@@ -1,0 +1,32 @@
+@import "variables";
+
+
+@mixin mobile-portrait() {
+  @media (min-width: 320px) and (max-width: 480px) {
+    @content
+  }
+}
+
+@mixin tablet-portrait-mobile-landscape() {
+  @media(min-width: 481px) and(max-width: 767px) {
+    @content
+  }
+}
+
+@mixin small-desktop-tablet-landscape() {
+  @media(min-width: 768px) and (max-width: 1024px) {
+    @content
+  }
+}
+
+@mixin medium-desktop() {
+  @media(min-width: 1025px) and (max-width: 1280px) {
+    @content
+  }
+}
+
+@mixin large-desktop() {
+  @media (max-width: 1281px) {
+    @content
+  }
+}
