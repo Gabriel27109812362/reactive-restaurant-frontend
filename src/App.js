@@ -17,6 +17,7 @@ import Home from 'components/views/Home/Home';
 const App = () => {
 
   const {root, about, signIn, signUp, home} = mainRoutes;
+
   return (
     <Provider store={store}>
       <div className="App">
