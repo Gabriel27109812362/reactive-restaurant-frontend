@@ -10,8 +10,8 @@ import {
 import {mainRoutes} from './routes';
 import store from 'store/store';
 import About from 'components/views/About/About';
-import SignIn from 'components/views/SignIn/SignIn';
-import SignUp from 'components/views/SignUp/SignUp';
+import SignIn from 'components/views/SignTemplate/SignIn/SignIn';
+import SignUp from 'components/views/SignTemplate/SignUp/SignUp';
 import Home from 'components/views/Home/Home';
 
 const App = () => {
