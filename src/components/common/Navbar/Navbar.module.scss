@@ -1,5 +1,4 @@
-@import "../../../styles/variables";
-@import "../../../styles/responsive";
+@import "../../../styles/common";
 
 .topTemplate {
   width: 100%;
@@ -124,7 +123,7 @@
     font-size: 38px;
   }
   @include large-desktop() {
-  font-size: 45px;
+    font-size: 45px;
   }
 
 }
