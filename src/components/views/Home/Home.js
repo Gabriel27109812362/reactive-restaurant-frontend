@@ -1,39 +1,23 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styles from './Home.module.scss';
+import {NavbarWithMenu} from '../../common/Navbar/Navbar';
+import {Footer} from '../../common/Footer/Footer';
 
-export default class Home extends Component {
-  render() {
-    return (
-      <>
-        <div className={styles.top}>
-          <ul className={styles.nav_bar}>
-            <li className={styles.nav_bar_li}>
-              <a className={styles.nav_bar_a}
-                 href="/src/components/Home/Home.js">Home</a>
-            </li>
-            <li className={styles.nav_bar_li}>
-              <a className={styles.nav_bar_a}
-                 href="/src/components/About/About.js">About</a>
-            </li>
-            <li className={styles.nav_bar_li}>
-              <a className={styles.nav_bar_a} href="#">Sign up</a>
-            </li>
-            <li className={styles.nav_bar_li}>
-              <a className={styles.nav_bar_a} href="#">Sign in</a>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.image}>
-        </div>
-        <div className={styles.app_name}>
-          <h1>Reactive Restaurant</h1>
-        </div>
-        <div className={styles.bottom}>
-        </div>
-      </>
-    );
-  }
-}
+const Home = props => {
 
+  return (
+    <>
+      <NavbarWithMenu/>
+      <div className={styles.image}>
+      </div>
+      <div className={styles.appName}>
+        <h1 className={styles.title}>Reactive Restaurant</h1>
+      </div>
+      <Footer/>
+    </>
+  );
+
+};
+export default Home;
 
 
