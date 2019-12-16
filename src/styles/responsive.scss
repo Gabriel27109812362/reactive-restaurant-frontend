@@ -30,3 +30,24 @@
     @content
   }
 }
+
+
+@mixin small-desktop-tablet-landscape-height() {
+  @media (min-height: 841px) {
+    @content
+  }
+}
+
+@mixin medium-desktop-height() {
+  @media (min-height: 1024px) {
+    @content
+  }
+
+}
+
+@mixin large-desktop-height() {
+  @media(min-height: 1204px) {
+    @content
+  }
+}
+

@@ -33,15 +33,32 @@
 
   @include tablet-portrait-mobile-landscape() {
     font-size: 14px;
+    min-height: 500px;
+  }
+
+
+  @include small-desktop-tablet-landscape-height() {
+    font-size: 17px;
   }
   @include small-desktop-tablet-landscape() {
     font-size: 17px;
+    min-height: 525px;
+  }
+
+  @include medium-desktop-height() {
+    font-size: 20px;
   }
   @include medium-desktop() {
     font-size: 20px;
+    min-height: 575px;
+  }
+
+  @include large-desktop-height() {
+    font-size: 23px;
   }
   @include large-desktop() {
-    font-size: 22px;
+    font-size: 23px;
+    min-height: 625px;
   }
 }
 
