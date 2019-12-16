@@ -1,103 +1,152 @@
-@import url('https://fonts.googleapis.com/css?family=Princess+Sofia&display=swap');
+@import '../../../styles/common';
 
-.top {
-
-  position: absolute;
+.mainContainer {
   width: 100%;
-  height: 120px;
-  left: -1px;
-  top: 0px;
+  height: calc(100vh - 120px);
+  min-height: 448px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 
-  background: #FF9C54;
+
+  @include small-desktop-tablet-landscape() {
+    height: calc(100vh - 160px);
+    min-height: 525px;
+  }
+  @include medium-desktop() {
+    height: calc(100vh - 200px);
+    min-height: 584px;
+
+  }
+  @include large-desktop() {
+    height: calc(100vh - 240px);
+    min-height: 635px;
+
+  }
 }
 
-.bottom {
 
-  width: 100%;
-  height: 120px;
-  bottom: 0px;
-  left: -1px;
-  position: fixed;
+.title {
 
-  background: #FF9C54;
-}
-
-.app_name {
-  font-family: Princess Sofia;
-  padding-top: 0px;
+  font-family: $font-main;
   font-size: 30px;
-  color: #000000;
-  text-align: left;
-}
+  margin-top: 75px;
 
-.sign_up {
-
-  font-family: Princess Sofia;
-  font-size: 50px;
-  text-align: center;
-}
-
-.main {
-
-
-  padding: 130px;
-  font-family: Princess Sofia;
-  text-align: center;
+  @include small-desktop-tablet-landscape() {
+    margin-top: 65px;
+    font-size: 43px;
+  }
+  @include medium-desktop() {
+    margin-top: 60px;
+    font-size: 50px;
+  }
+  @include large-desktop() {
+    margin-top: 55px;
+    font-size: 58px;
+  }
 
 }
 
-.wrapper {
-  text-align: center;
+.signUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 206px;
+
+  @include small-desktop-tablet-landscape() {
+    width: 300px;
+  }
+  @include medium-desktop() {
+    width: 400px;
+
+  }
+  @include large-desktop() {
+    width: 500px;
+  }
+
 }
 
-form {
-
-  display: inline-block;
-
-  width: 50%;
-  align-content: center;
-}
-
-input {
-
-  padding: 7px;
-  font-size: 20px;
-  width: 50%;
-  text-align: left;
-  border-bottom-color: #FF9C54;
+.control {
+  width: 100%;
+  height: 15px;
+  margin: 5px 0;
+  border-top: none;
   border-left: none;
   border-right: none;
-  border-top: none;
+  border-bottom: 2px solid $main-color;
+  font-size: 11px;
+  font-family: $text-font;
+
+  @include small-desktop-tablet-landscape() {
+    width: 95%;
+    height: 23px;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  @include medium-desktop() {
+    width: 95%;
+    height: 26px;
+    margin: 13px 0;
+    font-size: 22px;
+
+  }
+  @include large-desktop() {
+    width: 95%;
+    height: 30px;
+    margin: 16px 0;
+    font-size: 26px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-size: 11px;
+    font-family: $font-main;
+    color: $text-color;
+
+    @include small-desktop-tablet-landscape() {
+      font-size: 16px;
+    }
+    @include medium-desktop() {
+      font-size: 22px;
+    }
+    @include large-desktop() {
+      font-size: 26px;
+    }
+  }
+
 }
 
-input::placeholder {
 
-  size: 50px;
-  font-family: Princess Sofia;
-  color: #000000;
-}
-
-
-.nav_bar {
-
-  list-style: none;
-  background-image: url(../../../assets/logo.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding: 35px;
-  padding-left: 170px;
-  font-family: Princess Sofia;
-  font-size: 35px;
-}
-
-.submit_button {
-  font-family: Princess Sofia;
+.submit {
+  width: 85px;
+  height: 25px;
+  font-family: $font-main;
   margin-top: 30px;
-  background-color: white;
-  font-size: 25px;
-  color: black;
-  padding: 7px 35px;
-  border-radius: 20px;
-  display: inline-block;
-  border: 2px solid #FF9C54;
+  background-color: $background;
+  border-radius: 7.5px;
+  border: 2px solid $main-color;
+  font-size: 13px;
+
+
+  @include small-desktop-tablet-landscape() {
+    font-size: 18px;
+    width: 119px;
+    height: 35px;
+  }
+  @include medium-desktop() {
+    font-size: 21px;
+    width: 130px;
+    height: 38px;
+
+  }
+  @include large-desktop() {
+    font-size: 23px;
+    width: 135px;
+    height: 40px;
+  }
+
 }

@@ -1,46 +1,31 @@
 import React, {Component} from 'react';
 import styles from './SignUp.module.scss';
+import {NavbarWithLogo} from '../../common/Navbar/Navbar';
+import {Footer} from '../../common/Footer/Footer';
 
 export default class SignUp extends Component {
-  
+
   render() {
 
     return (
       <>
-        <div className={styles.top}>
-          <div className={styles.nav_bar}>
-            Reactive Restaurant
-          
-          </div>
-        
-        </div>
-        <div className={styles.main}> 
-          <p className={styles.sign_up}>
-            Sign Up  </p>
-            <div className={styles.wrapper}>
-            <form>
-
-            <input type="text" placeholder="Name" name="name" required />
-            <p></p>
-            <input type="text" placeholder="Surname" name="surname" required />
-            <p></p>
-            <input type="email" placeholder="Email" name="email" required />
-            <p></p>
-            <input type="password" placeholder="Password" name="psw" required />
-            <p></p>
-            <input type="password" placeholder="Confirm password" name="psw" required />
-            
-
+        <NavbarWithLogo/>
+        <div className={styles.mainContainer}>
+          <p className={styles.title}>Sign Up</p>
+          <form className={styles.signUp}>
+            <input className={styles.control} type="text" placeholder="Name"/>
+            <input className={styles.control} type="text" placeholder="Surname"
+                   required/>
+            <input className={styles.control} type="email" placeholder="Email"
+                   required/>
+            <input className={styles.control} type="password"
+                   placeholder="Password" required/>
+            <input className={styles.control} type="password"
+                   placeholder="Confirm password" required/>
+            <button className={styles.submit}> Submit</button>
           </form>
-          <p></p>
-          <p></p>
-          <button className={styles.submit_button}> Submit </button>
-           </div>
-         
-        
-         </div>
-        <div className={styles.bottom}>
         </div>
+        <Footer/>
       </>
     );
   }

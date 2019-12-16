@@ -127,3 +127,11 @@
   }
 
 }
+
+.logoLink {
+  text-decoration: none;
+
+  &:visited {
+    color: $text-color;
+  }
+}

@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   font-family: $font-main;
+  min-height: 448px;
 
 
   @include small-desktop-tablet-landscape() {

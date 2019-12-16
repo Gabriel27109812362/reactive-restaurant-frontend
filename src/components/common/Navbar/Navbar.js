@@ -45,14 +45,23 @@ export const NavbarWithMenu = props => {
 };
 
 export const NavbarWithLogo = props => {
+
+  const {root} = mainRoutes;
+
+
   return (
     <Navbar>
       <div className={styles.logoContainer}>
-        <img src={logo} alt="logo" className={styles.logo}/>
-        <p className={styles.logoText}>Reactive Restaurant</p>
+        <Link to={root}>
+          <img src={logo} alt="logo" className={styles.logo}/>
+        </Link>
+        <Link className={styles.logoLink} to={root}>
+          <p className={styles.logoText}>Reactive Restaurant</p>
+        </Link>
       </div>
       {props.children}
     </Navbar>
   );
 };
+
 
