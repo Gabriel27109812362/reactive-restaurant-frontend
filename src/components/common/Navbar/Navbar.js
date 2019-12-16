@@ -48,7 +48,6 @@ export const NavbarWithLogo = props => {
 
   const {root} = mainRoutes;
 
-
   return (
     <Navbar>
       <div className={styles.logoContainer}>
