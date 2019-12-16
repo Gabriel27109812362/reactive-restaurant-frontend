@@ -2,19 +2,18 @@
 
 import React, { Component } from 'react';
 import styles from './SignIn.module.scss';
-import logoo from '../logo.png';
 
 
 
 export default class SignIn extends Component {
- render() {   
+ render() {
    return (
-    <div className={styles.top}>  
+    <div className={styles.top}>
     <li className={styles.logo}>
               <a className={styles.logo_a}
                  href="/src/components/Home/Home.js">Reactive Restaurant</a>
             </li>
-    
+
        <h1>Sign In</h1>
        <form className={styles.login}>
         <h3>
@@ -25,14 +24,14 @@ export default class SignIn extends Component {
       <br/>
       <br/>
 
-        
+
       <button className={styles.button} type="submit">Submit</button>
          </h3>
        </form>
-     
+
        <div className={styles.bottom}>
         </div>
         </div>
    )
  }
-} 
+}
