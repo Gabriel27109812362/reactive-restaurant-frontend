@@ -1,0 +1,31 @@
+@import '../../../../../styles/common';
+
+.submit {
+  width: 85px;
+  height: 25px;
+  font-family: $font-main;
+  margin-top: 30px;
+  background-color: $background;
+  border-radius: 7.5px;
+  border: 2px solid $main-color;
+  font-size: 13px;
+
+
+  @include small-desktop-tablet-landscape() {
+    font-size: 18px;
+    width: 119px;
+    height: 35px;
+  }
+  @include medium-desktop() {
+    font-size: 21px;
+    width: 130px;
+    height: 38px;
+  }
+  @include large-desktop() {
+    font-size: 23px;
+    width: 135px;
+    height: 40px;
+  }
+}
+
+

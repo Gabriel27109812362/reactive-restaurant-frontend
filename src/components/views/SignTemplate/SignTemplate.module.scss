@@ -1,0 +1,48 @@
+@import '../../../styles/common';
+
+.mainContainer {
+  width: 100%;
+  height: calc(100vh - 120px);
+  min-height: 448px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+
+  @include small-desktop-tablet-landscape() {
+    height: calc(100vh - 160px);
+    min-height: 525px;
+  }
+  @include medium-desktop() {
+    height: calc(100vh - 200px);
+    min-height: 584px;
+
+  }
+  @include large-desktop() {
+    height: calc(100vh - 240px);
+    min-height: 635px;
+
+  }
+}
+
+.title {
+
+  font-family: $font-main;
+  font-size: 30px;
+  margin-top: 75px;
+
+  @include small-desktop-tablet-landscape() {
+    margin-top: 65px;
+    font-size: 43px;
+  }
+  @include medium-desktop() {
+    margin-top: 60px;
+    font-size: 50px;
+  }
+  @include large-desktop() {
+    margin-top: 55px;
+    font-size: 58px;
+  }
+
+}

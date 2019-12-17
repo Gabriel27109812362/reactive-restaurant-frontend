@@ -1,0 +1,137 @@
+@import "../../../styles/common";
+
+.topTemplate {
+  width: 100%;
+  background: $main-color;
+  height: 60px;
+  position: relative;
+
+  @include small-desktop-tablet-landscape() {
+    height: 80px;
+  }
+  @include medium-desktop() {
+    height: 100px;
+  }
+  @include large-desktop() {
+    height: 120px;
+  }
+}
+
+
+.logoContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 75%;
+  height: 60px;
+
+
+  @include small-desktop-tablet-landscape() {
+    height: 80px;
+    width: 60%;
+  }
+  @include medium-desktop() {
+    height: 100px;
+    width: 50%;
+  }
+  @include large-desktop() {
+    height: 120px;
+    width: 40%;
+  }
+}
+
+.logo {
+  width: 53px;
+  height: 48px;
+  margin-left: 3%;
+  margin-right: 12px;
+
+  @include small-desktop-tablet-landscape() {
+    width: 73px;
+    height: 66px;
+  }
+  @include medium-desktop() {
+    width: 91px;
+    height: 83px;
+
+  }
+  @include large-desktop() {
+    width: 110px;
+    height: 100px;
+  }
+
+}
+
+.logoText {
+  font-size: 17px;
+  margin: 0;
+  font-family: $font-main;
+  @include small-desktop-tablet-landscape() {
+    font-size: 25px;
+  }
+  @include medium-desktop() {
+    font-size: 35px;
+  }
+  @include large-desktop() {
+    font-size: 40px;
+  }
+}
+
+
+.menuList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 90%;
+  height: 60px;
+  margin: 0 auto;
+  padding: 0;
+
+  @include small-desktop-tablet-landscape() {
+    width: 75%;
+    height: 80px;
+  }
+  @include medium-desktop() {
+    width: 65%;
+    height: 100px;
+  }
+  @include large-desktop() {
+    width: 60%;
+    height: 120px;
+  }
+}
+
+.linkToTab {
+  text-decoration: none;
+  font-family: $font-main;
+  font-size: 21px;
+
+  &:visited {
+    color: $text-color;
+  }
+
+  @include small-desktop-tablet-landscape() {
+    font-size: 29px;
+
+  }
+  @include medium-desktop() {
+    font-size: 38px;
+  }
+  @include large-desktop() {
+    font-size: 45px;
+  }
+
+}
+
+.logoLink {
+  text-decoration: none;
+
+  &:visited {
+    color: $text-color;
+  }
+}

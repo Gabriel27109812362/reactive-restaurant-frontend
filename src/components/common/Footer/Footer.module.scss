@@ -1,0 +1,18 @@
+@import "../../../styles/common";
+
+.topTemplate {
+  width: 100%;
+  background: $main-color;
+  height: 60px;
+  position: relative;
+
+  @include small-desktop-tablet-landscape() {
+    height: 80px;
+  }
+  @include medium-desktop() {
+    height: 100px;
+  }
+  @include large-desktop() {
+    height: 120px;
+  }
+}
