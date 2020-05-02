@@ -28,7 +28,6 @@ const App = () => {
             <Route path={signIn} component={SignIn}/>
             <Route path={signUp} component={SignUp}/>
             <Route path={aftersignin} component={AfterSignIn}/>
-
             <Route path={home}>
               <Redirect to={root}/>
             </Route>
@@ -41,3 +40,4 @@ const App = () => {
 };
 
 export default App;
+
