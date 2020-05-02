@@ -5,6 +5,7 @@
   height: calc(100vh - 120px);
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   font-family: $font-main;
   min-height: 448px;
 
@@ -24,3 +25,27 @@
   color: $text-color;
 }
 
+.logo {
+
+  width: 400px;
+
+
+  @include medium-desktop() {
+    width: 350px;
+  }
+
+
+  @include small-desktop-tablet-landscape() {
+    width: 300px;
+
+  }
+  @include tablet-portrait-mobile-landscape() {
+    width: 250px;
+  }
+
+  @include mobile-portrait() {
+    width: 200px;
+  }
+
+
+}
