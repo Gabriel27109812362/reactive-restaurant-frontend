@@ -1,0 +1,129 @@
+@import '../../../styles/common';
+
+
+.title {
+  font-family: $font-main;
+  font-size: 13px;
+  margin-left: 30%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+
+
+  @include tablet-portrait-mobile-landscape() {
+    font-size: 20px;
+
+  }
+  @include small-desktop-tablet-landscape() {
+    font-size: 30px;
+  }
+  @include medium-desktop() {
+    font-size: 35px;
+  }
+  @include large-desktop() {
+    font-size: 40px;
+  }
+}
+
+
+
+
+
+.box{
+  font-size: 0;
+ display: flex;   
+ flex-wrap: wrap;
+ justify-content: center;
+
+}
+
+
+
+.Container {
+  
+ font-size: 0;
+  justify-content: space-around;
+  width: 13%;
+  height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  border-radius: 30px;
+    border: 2px solid $main-color;
+    margin-left: 10px;
+    padding: 40px 50px;
+    margin-bottom: 40px;
+
+
+
+
+    @include small-desktop-tablet-landscape() {
+      height: 50px;
+      width: 23%;
+    }
+
+    @include medium-desktop() {
+      height: 80px;
+      width: 30%;
+
+    }
+
+    @include large-desktop() {
+      height: 110px;
+      width: 40%;
+    }
+  }
+
+
+.food { 
+   
+
+  width: 63px;
+  height: 58px;
+
+    
+
+  @include small-desktop-tablet-landscape() {
+    width: 73px;
+    height: 66px;
+  }
+  @include medium-desktop() {
+    width: 91px;
+    height: 83px;
+
+  }
+  @include large-desktop() {
+    width: 110px;
+    height: 100px;
+  }
+
+}
+
+
+.foodText {
+
+  font-size: 17px;
+  margin:0;
+  font-family: $font-main;
+  white-space:nowrap;
+
+  
+  @include small-desktop-tablet-landscape() {
+    font-size: 25px;
+  }
+  @include medium-desktop() {
+    font-size: 35px;
+  }
+  @include large-desktop() {
+    font-size: 30px;
+  }
+}
+
+
+
+.foodLink {
+  text-decoration: none;
+
+  &:visited {
+    color: $text-color;
+  }
+}

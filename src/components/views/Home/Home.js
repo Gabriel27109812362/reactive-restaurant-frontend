@@ -13,6 +13,8 @@ const Home = props => {
       <div className={styles.appName}>
         <h1 className={styles.title}>Reactive Restaurant</h1>
       </div>
+      <a href="/aftersignin"><p>Link do komponentu aftersignin</p></a>
+
       <Footer/>
     </>
   );
