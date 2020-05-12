@@ -1,0 +1,10 @@
+@import './../../../../../styles/common';
+
+.validator {
+  font-family: $text-font;
+  font-size: 10px;
+  color: $validators;
+  margin: 0 0 0 2%;
+  align-self: flex-start;
+
+}

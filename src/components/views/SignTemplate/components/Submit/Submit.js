@@ -3,7 +3,7 @@ import styles from './Submit.module.scss';
 
 const Submit = (props) => {
   return (
-    <button className={styles.submit}>{props.label}</button>
+    <button type='submit' className={styles.submit}>{props.label}</button>
   );
 };
 
