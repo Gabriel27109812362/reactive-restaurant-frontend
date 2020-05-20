@@ -13,10 +13,11 @@ import About from 'components/views/About/About';
 import SignIn from 'components/views/SignTemplate/SignIn/SignIn';
 import SignUp from 'components/views/SignTemplate/SignUp/SignUp';
 import Home from 'components/views/Home/Home';
+import AfterSignIn from 'components/views/AfterSignIn/AfterSignIn';
 
 const App = () => {
 
-  const {root, about, signIn, signUp, home} = mainRoutes;
+  const {root, about, signIn, signUp, home, aftersignin} = mainRoutes;
 
   return (
     <Provider store={store}>
@@ -26,6 +27,7 @@ const App = () => {
             <Route path={about} component={About}/>
             <Route path={signIn} component={SignIn}/>
             <Route path={signUp} component={SignUp}/>
+            <Route path={aftersignin} component={AfterSignIn}/>
             <Route path={home}>
               <Redirect to={root}/>
             </Route>
@@ -38,3 +40,4 @@ const App = () => {
 };
 
 export default App;
+
