@@ -30,8 +30,9 @@ export const NavbarWithMenu = props => {
           up</Link>
       </li>
       <li>
-        <Link className={styles.linkToTab} to={signIn}>Sign
-          in</Link>
+        <Link className={styles.linkToTab} to={signIn}>
+          Sign in
+        </Link>
       </li>
     </ul>
 

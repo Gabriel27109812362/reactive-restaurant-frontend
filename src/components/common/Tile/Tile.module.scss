@@ -1,0 +1,49 @@
+@import '../../../styles/common';
+
+
+.Container {
+  width: 170px;
+  height: 170px;
+  margin: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 30px;
+  border: 2px solid $main-color;
+
+  padding: 30px;
+
+
+}
+
+
+.foodVert {
+
+  height: 90px;
+
+}
+
+
+.foodHoriz {
+  height: 70px;
+}
+
+
+.foodText {
+
+  font-family: $font-main;
+  white-space: nowrap;
+  font-size: 30px;
+  margin: 20px 0 0 0;
+
+}
+
+
+.foodLink {
+  text-decoration: none;
+
+  &:visited {
+    color: $text-color;
+  }
+}

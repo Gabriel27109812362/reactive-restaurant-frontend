@@ -4,6 +4,6 @@ export const mainRoutes = {
   signIn: '/signIn',
   signUp: '/signUp',
   home: '/home',
-  aftersignin: '/aftersignin',
+  menu: '/menu',
 
 };
