@@ -6,10 +6,12 @@ import Submit from '../components/Submit/Submit';
 import Validator from '../components/Validator/Validator';
 import { registerUser } from 'actions/user';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
+import { mainRoutes } from '../../../../routes';
 
 const SignUp = (props) => {
 
-  const { registerUser } = props;
+  const { registerUser, history } = props;
 
   const [ userData, setUserData ] = useState({
     name: '',
@@ -31,9 +33,6 @@ const SignUp = (props) => {
 
   const onSubmit = async(e) => {
     e.preventDefault();
-
-    console.log(userData);
-
     const { name, surname, confirmedPassword, password, email } = userData;
 
     if(password !== confirmedPassword) {
@@ -41,19 +40,7 @@ const SignUp = (props) => {
       return;
     }
 
-    console.log(name, surname, confirmedPassword, password, email);
-
-    console.log('ial here');
-
-    console.log(process.env.API_URL);
-
-    const status = await registerUser({ name, surname, email, password });
-
-    console.log(status);
-
-    if(!status) {
-      setExistedUserValidator(true);
-    }
+    await registerUser({ name, surname, email, password });
 
     setUserData({
       name: '',
@@ -62,6 +49,9 @@ const SignUp = (props) => {
       password: '',
       confirmedPassword: '',
     });
+
+    history.push(mainRoutes.signIn);
+
   };
 
   const handleInputChange = (e) => {
@@ -134,4 +124,4 @@ const mapDispatchToProps = {
   registerUser,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(SignUp));

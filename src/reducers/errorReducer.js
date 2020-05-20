@@ -1,4 +1,4 @@
-import { ERROR } from '../types';
+import { CLEAR_ERROR, ERROR } from '../types';
 
 const initialState = {
   error: false,
@@ -14,6 +14,13 @@ const errorReducer = (state = initialState, action) => {
         message: payload,
       };
     }
+    case CLEAR_ERROR: {
+      return {
+        error: false,
+        message: '',
+      };
+    }
+
     default:
       return state;
   }

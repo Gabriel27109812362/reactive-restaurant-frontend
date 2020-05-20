@@ -6,11 +6,11 @@ import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 const logger = createLogger({
-  level: 'info',
+  level: 'log',
   collapsed: true,
 });
 
-const storeDev = createStore(rootReducer, [],
+const storeDev = createStore(rootReducer, {},
   composeWithDevTools(applyMiddleware(thunk, logger)));
 
 export default storeDev;

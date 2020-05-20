@@ -5,7 +5,6 @@ import drink from '../../../assets/Drink.svg';
 import fries from '../../../assets/Fries.svg';
 import sandwich from '../../../assets/Sandwich.svg';
 import { mainRoutes } from '../../../routes';
-import { Link } from 'react-router-dom';
 import { NavbarWithLogo } from '../../common/Navbar/Navbar';
 import { Footer } from '../../common/Footer/Footer';
 import { Tile } from '../../common/Tile/Tile';

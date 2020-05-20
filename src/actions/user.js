@@ -1,6 +1,6 @@
 import { api } from '../api';
 import { LOG_IN, LOG_OUT } from '../types';
-import { error } from 'actions/error';
+import { error, clear } from 'actions/error';
 
 export const registerUser = ({ name, surname, email, password }) => dispatch => {
   try {
@@ -13,9 +13,12 @@ export const registerUser = ({ name, surname, email, password }) => dispatch => 
 
 export const authUser = ({ email, password }) => async dispatch => {
   try {
-    const { accessToken } = await api.post('user/auth', { email, password });
+    const { data: { accessToken } } = await api.post('user/auth',
+      { email, password });
     dispatch(logInUser(email, accessToken));
     window.localStorage.setItem('jwtToken', accessToken.toString());
+    dispatch(clear);
+    return accessToken;
   } catch(e) {
     dispatch(error(e.message));
   }
