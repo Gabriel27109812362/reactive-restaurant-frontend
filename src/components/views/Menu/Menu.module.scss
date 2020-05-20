@@ -1,0 +1,44 @@
+@import '../../../styles/common';
+
+
+.title {
+
+  font-family: $font-main;
+  font-size: 45px;
+
+  @include medium-desktop() {
+    font-size: 40px;
+  }
+  @include small-desktop-tablet-landscape() {
+    font-size: 35px;
+  }
+
+  @include tablet-portrait-mobile-landscape() {
+    font-size: 25px;
+  }
+
+}
+
+
+.tilesBox {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
